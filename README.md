@@ -19,7 +19,7 @@ A Cognitive Services (kind=Speech Services) API key is required to access the UR
 The following will synthesize the string `64 BASIC BYTES FREE. READY.`, using the en-US locale, rending with a female voice. The output file format is a 16khz 32kbit single channel MP3 audio file.
 
 ```golang
-import tts "github.com/jesseward/azuretexttospeech"
+import tts "github.com/emikhalev/azuretexttospeech"
 func main() {
     # See TextToSpeechAPI and TokenRefreshAPI types for list of endpoints and regions.
     azureSpeech, _ := tts.New("YOUR-API-KEY", tts.RegionEastUS)
