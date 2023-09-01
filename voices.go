@@ -42,12 +42,11 @@ func (az *AzureCSTextToSpeech) buildVoiceToRegionMap() (RegionVoiceMap, error) {
 	if err != nil {
 		return nil, err
 	}
-
 	m := make(map[supportedVoices]string)
 	for _, x := range v {
-		if x.VoiceType == voiceStandard {
+		//if x.VoiceType == voiceStandard {
 			m[supportedVoices{Gender: x.Gender, Locale: x.Locale}] = x.ShortName
-		}
+		///}
 	}
 	return m, err
 }

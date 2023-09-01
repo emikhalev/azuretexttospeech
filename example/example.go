@@ -24,7 +24,7 @@ func main() {
 	if apiKey = os.Getenv("AZUREKEY"); apiKey == "" {
 		exit(fmt.Errorf("Please set your AZUREKEY environment variable"))
 	}
-	az, err := tts.New(apiKey, tts.RegionEastUS)
+	az, err := tts.New(apiKey, tts.RegionWestEurope)
 	if err != nil {
 		exit(fmt.Errorf("failed to create new client, received %v", err))
 	}
@@ -35,17 +35,17 @@ func main() {
 	ctx := context.Background()
 	b, err := az.SynthesizeWithContext(
 		ctx,
-		"64 BASIC BYTES FREE. READY.",
+		"Hello, World!",
 		tts.LocaleEnUS,
 		tts.GenderFemale,
-		tts.Audio16khz32kbitrateMonoMp3)
+		tts.Ogg16Khz16BitMonoOpus)
 
 	if err != nil {
 		exit(fmt.Errorf("unable to synthesize, received: %v", err))
 	}
 
 	// send results to disk.
-	err = ioutil.WriteFile("audio.mp3", b, 0644)
+	err = ioutil.WriteFile("audio.ogg", b, 0644)
 	if err != nil {
 		exit(fmt.Errorf("unable to write file, received %v", err))
 	}

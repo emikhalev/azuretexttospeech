@@ -116,6 +116,6 @@ func (i *Locale) UnmarshalJSON(data []byte) error {
 	}
 
 	var err error
-	*i, err = LocaleString(s)
+	*i, _ = LocaleString(s)
 	return err
 }

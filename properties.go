@@ -21,6 +21,35 @@ const (
 	Audio16khz128kbitrateMonoMp3
 	Audio24khz48kbitrateMonoMp3
 	Audio24khz96kbitrateMonoMp3
+	Audio24Khz160KBitRateMonoMp3 
+	Raw16Khz16BitMonoTrueSilk 
+	Riff16Khz16BitMonoPcm 
+	Riff8Khz16BitMonoPcm 
+	Riff24Khz16BitMonoPcm 
+	Riff8Khz8BitMonoMULaw 
+	Raw16Khz16BitMonoPcm 
+	Raw24Khz16BitMonoPcm 
+	Raw8Khz16BitMonoPcm 
+	Ogg16Khz16BitMonoOpus 
+	Ogg24Khz16BitMonoOpus 
+	Raw48Khz16BitMonoPcm 
+	Riff48Khz16BitMonoPcm 
+	Audio48Khz96KBitRateMonoMp3 
+	Audio48Khz192KBitRateMonoMp3 
+	Ogg48Khz16BitMonoOpus 
+	Webm16Khz16BitMonoOpus 
+	Webm24Khz16BitMonoOpus 
+	Raw24Khz16BitMonoTrueSilk 
+	Raw8Khz8BitMonoALaw 
+	Riff8Khz8BitMonoALaw 
+	Webm24Khz16Bit24KbpsMonoOpus 
+	Audio16Khz16Bit32KbpsMonoOpus 
+	Audio24Khz16Bit48KbpsMonoOpus 
+	Audio24Khz16Bit24KbpsMonoOpus 
+	Raw22050Hz16BitMonoPcm 
+	Riff22050Hz16BitMonoPcm 
+	Raw44100Hz16BitMonoPcm 
+	Riff44100Hz16BitMonoPcm 
 )
 
 func (a AudioOutput) String() string {
@@ -38,6 +67,35 @@ func (a AudioOutput) String() string {
 		"audio-16khz-128kbitrate-mono-mp3",
 		"audio-24khz-48kbitrate-mono-mp3",
 		"audio-24khz-96kbitrate-mono-mp3",
+		"audio-24khz-160kbitrate-mono-mp3",
+		"raw-16khz-16bit-mono-truesilk",
+		"riff-16khz-16bit-mono-pcm",
+		"riff-8khz-16bit-mono-pcm",
+		"riff-24khz-16bit-mono-pcm",
+		"riff-8khz-8bit-mono-mulaw",
+		"raw-16khz-16bit-mono-pcm",
+		"raw-24khz-16bit-mono-pcm",
+		"raw-8khz-16bit-mono-pcm",
+		"ogg-16khz-16bit-mono-opus",
+		"ogg-24khz-16bit-mono-opus",
+		"raw-48khz-16bit-mono-pcm",
+		"riff-48khz-16bit-mono-pcm",
+		"audio-48khz-96kbitrate-mono-mp3",
+		"audio-48khz-192kbitrate-mono-mp3",
+		"ogg-48khz-16bit-mono-opus",
+		"webm-16khz-16bit-mono-opus",
+		"webm-24khz-16bit-mono-opus",
+		"raw-24khz-16bit-mono-truesilk",
+		"raw-8khz-8bit-mono-alaw",
+		"riff-8khz-8bit-mono-alaw",
+		"webm-24khz-16bit-24kbps-mono-opus",
+		"audio-16khz-16bit-32kbps-mono-opus",
+		"audio-24khz-16bit-48kbps-mono-opus",
+		"audio-24khz-16bit-24kbps-mono-opus",
+		"raw-22050hz-16bit-mono-pcm",
+		"riff-22050hz-16bit-mono-pcm",
+		"raw-44100hz-16bit-mono-pcm",
+		"riff-44100hz-16bit-mono-pcm",
 	}[a]
 }
 

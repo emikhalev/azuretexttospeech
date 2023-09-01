@@ -32,7 +32,8 @@ func GenderString(s string) (Gender, error) {
 	if val, ok := _GenderNameToValueMap[s]; ok {
 		return val, nil
 	}
-	return 0, fmt.Errorf("%s does not belong to Gender values", s)
+	return GenderMale, nil
+	//return 0, fmt.Errorf("%s does not belong to Gender values", s)
 }
 
 // GenderValues returns all values of the enum
